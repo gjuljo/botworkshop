@@ -14,4 +14,4 @@ TIME: 8:30 am to 6:00 pm
 - To speedup the setup phase, you might install the prerequisite Node.js packages in your local woking directory:
   * `npm init`
   * `npm install botbuilder restify dotenv-extended --save`
-  * `npm install request request-promise system-sleep giphy-api forismatic-node lodash util applicationinsights mstranslator --save`
+  * `npm install request request-promise system-sleep giphy-api forismatic-node lodash util applicationinsights mstranslator assert --save`
