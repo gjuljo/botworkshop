@@ -1,0 +1,247 @@
+{
+  "luis_schema_version": "2.0.0",
+  "versionId": "0.1",
+  "name": "IOTAPP",
+  "desc": "",
+  "culture": "it-it",
+  "intents": [
+    {
+      "name": "None"
+    },
+    {
+      "name": "TURN_OFF"
+    },
+    {
+      "name": "TURN_ON"
+    }
+  ],
+  "entities": [
+    {
+      "name": "LUOGO"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [],
+  "actions": [],
+  "model_features": [
+    {
+      "name": "STANZE",
+      "mode": true,
+      "words": "cucina,camera da letto,camera,cameretta,stanzino,bagno,ingresso,salotto,salottino,corridoio,bagnetto,stanza,cucinino,cucinotto,scala,scalinata,cantina,cantinetta",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "ciao",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "salve",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "buongiorno",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "appiccia la luce",
+      "intent": "TURN_ON",
+      "entities": []
+    },
+    {
+      "text": "accendi la luce",
+      "intent": "TURN_ON",
+      "entities": []
+    },
+    {
+      "text": "accendi",
+      "intent": "TURN_ON",
+      "entities": []
+    },
+    {
+      "text": "accendi la luce in cucina",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 19,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "appiccia la luce in cucina",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 20,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "accendi la cucina",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 11,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "accendi la camera da letto",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 11,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "accendi la luce in bagno",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 19,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "accendi il salotto",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 11,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "spengi la luce",
+      "intent": "TURN_OFF",
+      "entities": []
+    },
+    {
+      "text": "spengi",
+      "intent": "TURN_OFF",
+      "entities": []
+    },
+    {
+      "text": "spegni la luce",
+      "intent": "TURN_OFF",
+      "entities": []
+    },
+    {
+      "text": "spegni",
+      "intent": "TURN_OFF",
+      "entities": []
+    },
+    {
+      "text": "spegni la cucina",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 10,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "spengi il corridoio",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 10,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "spegni la luce in salotto",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "smorza il salotto",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 10,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "smorza la luce in salotto",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "spegni la camera da letto",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 10,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "spegni il salotto",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 10,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "spegni il bagno",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "LUOGO",
+          "startPos": 10,
+          "endPos": 14
+        }
+      ]
+    }
+  ]
+}
