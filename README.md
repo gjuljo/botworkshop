@@ -12,6 +12,6 @@ TIME: 8:30 am to 6:00 pm
 - For the channels you want your Bot to work on, you need a user account on each of them. We also suggest you to install the desktop applications for the major channels ([Skype](https://www.skype.com/download-skype/skype-for-computer/), [Telegram](https://telegram.org/apps#desktop-apps) and [Slack](https://slack.com/downloads)).
 - For some deployment tests and examples we might use Microsoft Azure. We suggest you to create a free account on [Azure](https://azure.microsoft.com/it-it/free/) to build your own deploymenet environment.
 - To speedup the setup phase, you might install the prerequisite Node.js packages in your local woking directory:
-  * `npm init`
+  * `npm init -y`
   * `npm install botbuilder restify dotenv-extended --save`
   * `npm install request request-promise system-sleep giphy-api forismatic-node lodash util applicationinsights mstranslator assert --save`
