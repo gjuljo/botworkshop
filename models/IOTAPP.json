@@ -1,7 +1,7 @@
 {
   "luis_schema_version": "2.0.0",
   "versionId": "0.1",
-  "name": "IOTAPP",
+  "name": "DEMOAPP",
   "desc": "",
   "culture": "it-it",
   "intents": [
@@ -17,7 +17,7 @@
   ],
   "entities": [
     {
-      "name": "LUOGO"
+      "name": "STANZA"
     }
   ],
   "composites": [],
@@ -26,9 +26,21 @@
   "actions": [],
   "model_features": [
     {
+      "name": "ACCENSIONE",
+      "mode": true,
+      "words": "accendere,accendi,accensione,appicciare,appiccia",
+      "activated": true
+    },
+    {
+      "name": "SPEGNIMENTO",
+      "mode": true,
+      "words": "spegnere,spegni,spengere,spengi,smorza,smorzare",
+      "activated": true
+    },
+    {
       "name": "STANZE",
       "mode": true,
-      "words": "cucina,camera da letto,camera,cameretta,stanzino,bagno,ingresso,salotto,salottino,corridoio,bagnetto,stanza,cucinino,cucinotto,scala,scalinata,cantina,cantinetta",
+      "words": "cucina,salotto,bagno,corridodio,bagnetto,camera,cameretta,salottino,cucinino,cucinetta,corridoietto,ingresso,soggiorno,disimpegno,soffitta,cantina,mansarda,salone,stanza,stanzino,stanzetta",
       "activated": true
     }
   ],
@@ -50,44 +62,94 @@
       "entities": []
     },
     {
-      "text": "buongiorno",
-      "intent": "None",
-      "entities": []
-    },
-    {
-      "text": "appiccia la luce",
+      "text": "accendere",
       "intent": "TURN_ON",
       "entities": []
     },
     {
-      "text": "accendi la luce",
+      "text": "accendere la luce",
       "intent": "TURN_ON",
       "entities": []
     },
     {
-      "text": "accendi",
+      "text": "accendere luce",
       "intent": "TURN_ON",
       "entities": []
     },
     {
-      "text": "accendi la luce in cucina",
+      "text": "accendere la luce in cucina",
       "intent": "TURN_ON",
       "entities": [
         {
-          "entity": "LUOGO",
-          "startPos": 19,
-          "endPos": 24
+          "entity": "STANZA",
+          "startPos": 21,
+          "endPos": 26
         }
       ]
     },
     {
-      "text": "appiccia la luce in cucina",
+      "text": "accendere la luce in salotto",
       "intent": "TURN_ON",
       "entities": [
         {
-          "entity": "LUOGO",
-          "startPos": 20,
+          "entity": "STANZA",
+          "startPos": 21,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "accendere la luce in bagno",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 21,
           "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "vorrei accendere la luce in bagno",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 28,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "accendere la cucina",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 13,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "accendere il bagno",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 13,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "appiccia il bagno",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 12,
+          "endPos": 16
         }
       ]
     },
@@ -96,31 +158,86 @@
       "intent": "TURN_ON",
       "entities": [
         {
-          "entity": "LUOGO",
+          "entity": "STANZA",
           "startPos": 11,
           "endPos": 16
         }
       ]
     },
     {
-      "text": "accendi la camera da letto",
+      "text": "accenderesti la cucina",
       "intent": "TURN_ON",
       "entities": [
         {
-          "entity": "LUOGO",
-          "startPos": 11,
-          "endPos": 25
+          "entity": "STANZA",
+          "startPos": 16,
+          "endPos": 21
         }
       ]
     },
     {
-      "text": "accendi la luce in bagno",
+      "text": "accendere la luce in ingresso",
       "intent": "TURN_ON",
       "entities": [
         {
-          "entity": "LUOGO",
-          "startPos": 19,
-          "endPos": 23
+          "entity": "STANZA",
+          "startPos": 21,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "accenderesti la camera",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 16,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "vorresti accendere il bagno",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 22,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "accendimi la cucina",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 13,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "accendi ingresso",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 8,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "accendi bagnetto",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 8,
+          "endPos": 15
         }
       ]
     },
@@ -129,95 +246,310 @@
       "intent": "TURN_ON",
       "entities": [
         {
-          "entity": "LUOGO",
+          "entity": "STANZA",
           "startPos": 11,
           "endPos": 17
         }
       ]
     },
     {
-      "text": "spengi la luce",
+      "text": "accendi il bagno",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 11,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "accendi bagno",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 8,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "accendi corridoio",
+      "intent": "TURN_ON",
+      "entities": []
+    },
+    {
+      "text": "accendimi l'ingresso",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 12,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "accendi cucina",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 8,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "mi accenderesti la cucina per favore?",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 19,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "accenderesti la cucina?",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 16,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "accenderesti il salotto?",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 16,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "mi vuoi accendere il salotto?",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 21,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "accendimi il salotto",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 13,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "mi accendi il salotto?",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 14,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "accenderesti il bagno",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 16,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "accenderesti il bagno?",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 16,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "mi accenderesti la camera?",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 19,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "accendimi la camera",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 13,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "accendimi il salotto?",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 13,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "mi accendi il bagno?",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 14,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "mi accenderesti il salotto?",
+      "intent": "TURN_ON",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 19,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "spegnere la luce in cucina",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 20,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "spegnere la luce",
       "intent": "TURN_OFF",
       "entities": []
     },
     {
-      "text": "spengi",
+      "text": "spegnere la luce in camera",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 20,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "spegnere la luce in salone",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 20,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "smorza la luce",
       "intent": "TURN_OFF",
       "entities": []
     },
     {
-      "text": "spegni la luce",
+      "text": "smorza la luce in cucina",
       "intent": "TURN_OFF",
-      "entities": []
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 18,
+          "endPos": 23
+        }
+      ]
     },
     {
-      "text": "spegni",
+      "text": "spegnere la cucina",
       "intent": "TURN_OFF",
-      "entities": []
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 12,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "spegnere il salotto",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 12,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "spegnere il corridoio",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 12,
+          "endPos": 20
+        }
+      ]
     },
     {
       "text": "spegni la cucina",
       "intent": "TURN_OFF",
       "entities": [
         {
-          "entity": "LUOGO",
+          "entity": "STANZA",
           "startPos": 10,
           "endPos": 15
         }
       ]
     },
     {
-      "text": "spengi il corridoio",
+      "text": "spegneresti la cucina?",
       "intent": "TURN_OFF",
       "entities": [
         {
-          "entity": "LUOGO",
-          "startPos": 10,
-          "endPos": 18
-        }
-      ]
-    },
-    {
-      "text": "spegni la luce in salotto",
-      "intent": "TURN_OFF",
-      "entities": [
-        {
-          "entity": "LUOGO",
-          "startPos": 18,
-          "endPos": 24
-        }
-      ]
-    },
-    {
-      "text": "smorza il salotto",
-      "intent": "TURN_OFF",
-      "entities": [
-        {
-          "entity": "LUOGO",
-          "startPos": 10,
-          "endPos": 16
-        }
-      ]
-    },
-    {
-      "text": "smorza la luce in salotto",
-      "intent": "TURN_OFF",
-      "entities": [
-        {
-          "entity": "LUOGO",
-          "startPos": 18,
-          "endPos": 24
-        }
-      ]
-    },
-    {
-      "text": "spegni la camera da letto",
-      "intent": "TURN_OFF",
-      "entities": [
-        {
-          "entity": "LUOGO",
-          "startPos": 10,
-          "endPos": 24
+          "entity": "STANZA",
+          "startPos": 15,
+          "endPos": 20
         }
       ]
     },
@@ -226,9 +558,31 @@
       "intent": "TURN_OFF",
       "entities": [
         {
-          "entity": "LUOGO",
+          "entity": "STANZA",
           "startPos": 10,
           "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "spengeresti la cucina?",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 15,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "spegneresti il bagno",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 15,
+          "endPos": 19
         }
       ]
     },
@@ -237,9 +591,185 @@
       "intent": "TURN_OFF",
       "entities": [
         {
-          "entity": "LUOGO",
+          "entity": "STANZA",
           "startPos": 10,
           "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "spegni l'ingresso",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 9,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "devi spegnere il corridoio",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 17,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "spegnimi la cucina",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 12,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "spegni salotto",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 7,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "mi spegneresti il salotto?",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "mi spegni il salotto?",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 13,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "spegni bagnetto",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 7,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "spegni il corridodio",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 10,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "spegni salottino",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 7,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "spegnimi la stanza",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 12,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "spegni il corridoio",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 10,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "mi spegneresti il bagno?",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 18,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "spegnimi il bagno",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 12,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "mi spegni le camere?",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 13,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "mi spegni le cucine?",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 13,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "mi spegni i bagni?",
+      "intent": "TURN_OFF",
+      "entities": [
+        {
+          "entity": "STANZA",
+          "startPos": 12,
+          "endPos": 16
         }
       ]
     }

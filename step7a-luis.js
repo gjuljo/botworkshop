@@ -15,7 +15,7 @@ intents
     .matches('TURN_ON', [
         function (session, args, next) {
             session.dialogData.entities = args.entities;
-            var room = builder.EntityRecognizer.findEntity(args.entities, 'LUOGO');
+            var room = builder.EntityRecognizer.findEntity(args.entities, 'STANZA');
             if (room && room) {
                 session.send("TORN ON, ENTITY = " + room.entity);
             } else {
@@ -26,7 +26,7 @@ intents
     .matches('TURN_OFF', [
         function (session, args, next) {
             session.dialogData.entities = args.entities;
-            var room = builder.EntityRecognizer.findEntity(args.entities, 'LUOGO');
+            var room = builder.EntityRecognizer.findEntity(args.entities, 'STANZA');
             if (room && room.entity) {
                 session.send("TORN OFF, ENTITY = " + room.entity);
             } else {
